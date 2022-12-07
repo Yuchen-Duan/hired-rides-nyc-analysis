@@ -1,2 +1,4 @@
 .ipynb_checkpoints
 datasets/
+taxi_zones/
+*.parquet
