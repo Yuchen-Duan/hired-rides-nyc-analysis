@@ -2,3 +2,4 @@
 datasets/
 taxi_zones/
 *.parquet
+*.csv
