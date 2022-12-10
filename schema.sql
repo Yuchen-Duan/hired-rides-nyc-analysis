@@ -1,39 +1,40 @@
 
-CREATE TABLE hourly_weather (
-    hourly_weather_id INTEGER NOT NULL, 
-    date DATETIME, 
-    "hourlyPrecipitation" FLOAT, 
-    "hourlyWindSpeed" FLOAT, 
-    PRIMARY KEY (hourly_weather_id)
-)
+CREATE TABLE IF NOT EXISTS hourly_weather 
+(
+    hourly_weather_id INTEGER PRIMARY KEY, 
+    date TEXT, 
+    hourlyPrecipitation REAL, 
+    hourlyWindSpeed REAL
+);
 
-CREATE TABLE daily_weather (
-    daily_weather_id INTEGER NOT NULL, 
-    date DATETIME, 
-    "dailySustainedWindSpeed" FLOAT, 
-    PRIMARY KEY (daily_weather_id)
-)
+CREATE TABLE IF NOT EXISTS daily_weather 
+(
+    daily_weather_id INTEGER PRIMARY KEY, 
+    date TEXT, 
+    dailySustainedWindSpeed REAL
+);
 
-CREATE TABLE taxi_trips (
-    taxi_id INTEGER NOT NULL, 
-    pickup_datetime DATETIME, 
-    dropoff_datetime DATETIME, 
-    pickup_longitude FLOAT, 
-    pickup_latitude FLOAT, 
-    dropoff_longitude FLOAT, 
-    dropoff_latitude FLOAT, 
-    distance FLOAT, 
-    tip_amount FLOAT, 
-    PRIMARY KEY (taxi_id)
-)
+CREATE TABLE IF NOT EXISTS taxi_trips 
+(
+    taxi_id INTEGER INTEGER PRIMARY KEY, 
+    pickup_datetime TEXT, 
+    dropoff_datetime TEXT,
+    tip_amount REAL,
+    pickup_latitude REAL,
+    pickup_longitude REAL,
+    dropoff_latitude REAL,
+    dropoff_longitude REAL,
+    distance REAL, 
+    
+);
 
-CREATE TABLE uber_trips (
-    uber_id INTEGER NOT NULL, 
-    pickup_datetime DATETIME, 
-    pickup_longitude FLOAT, 
-    pickup_latitude FLOAT, 
-    dropoff_longitude FLOAT, 
-    dropoff_latitude FLOAT, 
-    distance FLOAT, 
-    PRIMARY KEY (uber_id)
-)
+CREATE TABLE IF NOT EXISTS uber_trips 
+(
+    uber_id INTEGER INTEGER PRIMARY KEY, 
+    pickup_datetime TEXT, 
+    pickup_longitude REAL, 
+    pickup_latitude REAL, 
+    dropoff_longitude REAL, 
+    dropoff_latitude REAL, 
+    distance REAL
+);
