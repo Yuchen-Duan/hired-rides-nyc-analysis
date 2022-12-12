@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS taxi_trips
     pickup_longitude REAL,
     dropoff_latitude REAL,
     dropoff_longitude REAL,
-    distance REAL, 
+    distance REAL
     
 );
 
