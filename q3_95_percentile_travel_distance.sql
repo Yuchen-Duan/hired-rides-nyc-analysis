@@ -12,7 +12,8 @@ SELECT
 FROM uber_trips
 WHERE strftime('%m',pickup_datetime) = '07' AND strftime('%Y',pickup_datetime) = '2013'
 
-ORDER BY distance DESC
+ORDER BY distance ASC
+
 LIMIT 1
 OFFSET ROUND(
     (
