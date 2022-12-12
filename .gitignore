@@ -4,3 +4,4 @@ taxi_zones/
 *.parquet
 *.csv
 *.db
+*.png
